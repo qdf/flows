@@ -1,0 +1,435 @@
+[
+  {
+    "id": "5c5c0528.cd230086",
+    "type": "inject",
+    "z": "8ee57d8a.0166a08a",
+    "name": "",
+    "topic": "",
+    "message": "",
+    "messageType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 812,
+    "y": 185,
+    "edges": [
+      [
+        "4f9349eb.66d1209f",
+        "a89df166.36453069",
+        "53f4fdf3.528f9cc4",
+        "6869192f.1f5de47c",
+        "e0ae0434.5dc6aed3",
+        "69736fcb.814a9b70",
+        "19de1231.4d21feb2",
+        "6e8f55ae.5a2672c5"
+      ]
+    ]
+  },
+  {
+    "id": "4f9349eb.66d1209f",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Followers",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: {\n   total_followers: 1207,\n   new_followers: 9\n }\n};\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 532,
+    "y": 485,
+    "edges": [
+      [
+        "034061e8.256107bb"
+      ]
+    ]
+  },
+  {
+    "id": "034061e8.256107bb",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Twitter Followers",
+    "sequenceNum": "2",
+    "pulseType": "widget-single-indicator",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 695,
+    "y": 436,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "a89df166.36453069",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Donut",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: [\n   {\n     title: 'Overdrive',\n     value: 20\n   },\n   {\n     title: 'Damaged',\n     value: 30\n   },\n   {\n     title: 'Exchange',\n     value: 10\n   },\n   {\n     title: 'Defect',\n     value: 15\n   },\n   {\n     title: 'Other',\n     value: 25\n   }\n ]\n};\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 813,
+    "y": 310,
+    "edges": [
+      [
+        "d65f4cc1.f07dfc6e"
+      ]
+    ]
+  },
+  {
+    "id": "d65f4cc1.f07dfc6e",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Donut Pie",
+    "sequenceNum": "4",
+    "pulseType": "widget-donut-pie",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 991,
+    "y": 377,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "53f4fdf3.528f9cc4",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Bar",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: [{\n   x: ['Girafee', 'orangutans', 'monkeys', 'Foo', 'bar', 'dd', 'a'],\n   y: [20, 14, 23, 3, 4, 5, 6]\n },]\n};\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 900,
+    "y": 516,
+    "edges": [
+      [
+        "3e98b35c.0df2c806"
+      ]
+    ]
+  },
+  {
+    "id": "3e98b35c.0df2c806",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Bar Chart",
+    "sequenceNum": "5",
+    "pulseType": "widget-bar-chart",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 1003,
+    "y": 588,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "6869192f.1f5de47c",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Bar With Target",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: [{\n   x: ['Girafee', 'orangutans', 'monkeys'],\n   y: [20, 14, 23],\n   target: 15\n }]\n};\n\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 741,
+    "y": 534,
+    "edges": [
+      [
+        "33495f99.d668be2b"
+      ]
+    ]
+  },
+  {
+    "id": "33495f99.d668be2b",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Bar Chart With Target",
+    "sequenceNum": "6",
+    "pulseType": "widget-bar-chart",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 529,
+    "y": 621,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "e0ae0434.5dc6aed3",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "StackedBar Chart",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: [\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [12, 18, 29],\n    name: 'LA Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  },\n  {\n    x: ['giraffes', 'orangutans', 'monkeys'],\n    y: [20, 14, 23],\n    name: 'SF Zoo',\n    type: 'bar'\n  }\n ]\n};\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 1058,
+    "y": 441,
+    "edges": [
+      [
+        "a989b651.6ff8f68b"
+      ]
+    ]
+  },
+  {
+    "id": "a989b651.6ff8f68b",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Stacked Bar Chart",
+    "sequenceNum": "4",
+    "pulseType": "widget-bar-chart",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 1274,
+    "y": 464,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "69736fcb.814a9b70",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Table",
+    "clusterid": "",
+    "func": "dataframe.message = {\n    data: {\n        headers: [\n            \"datetime\",\n            \"latitude\",\n            \"longitude\",\n            \"id\",\n            \"borough\",\n            \"contributing_factor_vehicle_1\",\n            \"contributing_factor_vehicle_2\",\n            \"number_of_cyclist_injured\",\n            \"number_of_cyclist_killed\",\n            \"number_of_motorist_injured\",\n            \"number_of_motorist_killed\",\n            \"number_of_pedestrians_injured\",\n            \"number_of_pedestrians_killed\",\n            \"number_of_persons_injured\",\n            \"number_of_persons_killed\",\n            \"off_street_name\",\n            \"on_street_name\",\n            \"vehicle_type_code1\",\n            \"vehicle_type_code2\",\n            \"zip_code\"\n        ],\n        data: [\n            [\n                \"2016/10/16 23:10:00\",\n                40.7440655, -73.987748,\n                3541453,\n                \"MANHATTAN\",\n                null,\n                null,\n                0,\n                0,\n                0,\n                0,\n                1,\n                0,\n                1,\n                0,\n                \"EAST 27 STREET\",\n                \"5 AVENUE\",\n                null,\n                null,\n                \"10016\"\n            ],\n            [\n                \"2016/10/16 23:10:00\",\n                40.8375147, -73.9147732,\n                3541705,\n                \"BRONX\",\n                \"Unspecified\",\n                \"Unspecified\",\n                0,\n                0,\n                0,\n                0,\n                0,\n                0,\n                0,\n                0,\n                \"MARCY PLACE\",\n                \"GRAND CONCOURSE\",\n                \"PASSENGER VEHICLE\",\n                \"SPORT UTILITY / STATION WAGON\",\n                \"10456\"\n            ]\n        ]\n    }\n\n};\n\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 1116,
+    "y": 233,
+    "edges": [
+      [
+        "aa89d7c9.3855a10c"
+      ]
+    ]
+  },
+  {
+    "id": "aa89d7c9.3855a10c",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Table",
+    "sequenceNum": 1,
+    "pulseType": "widget-table",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 1162,
+    "y": 289,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "19de1231.4d21feb2",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Performance Indicator",
+    "clusterid": "",
+    "func": "dataframe.message = {\n  data: [\n    {\n      id: 1,\n      name: 'Average Purchase Value',\n      value: 67.55,\n      uom: 'USD',\n      last: 59.80\n    },\n    {\n      id: 2,\n      name: 'Units/Transaction',\n      value: 3.66,\n      uom: 'UPT',\n      last: 3.72\n    }\n  ]\n};\n\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 557,
+    "y": 180,
+    "edges": [
+      [
+        "9e0a251d.8d714fc3"
+      ]
+    ]
+  },
+  {
+    "id": "9e0a251d.8d714fc3",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Performance Indicator",
+    "sequenceNum": "10",
+    "pulseType": "widget-two-indicator",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 216,
+    "y": 276,
+    "edges": [
+      [
+        
+      ]
+    ]
+  },
+  {
+    "id": "22e5f5c6.6849b17b",
+    "type": "layout",
+    "z": "8ee57d8a.0166a08a",
+    "name": "conclusion",
+    "info": "Flow Conclusion:\n\nLorem ipsum dolor sit amet, in mel nulla elitr scripta, mei posse corrumpit eu, vel et movet omnium admodum. Eos ne inermis apeirian indoctum. Nec at vero possit mediocritatem, velit exerci iriure quo cu. Eu mei amet ridens. No his debitis invenire disputationi, ex nec consul aeterno impedit.",
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 900,
+    "y": 66,
+    "edges": [
+      
+    ]
+  },
+  {
+    "id": "e5d3b75b.21f54f2f",
+    "type": "layout",
+    "z": "8ee57d8a.0166a08a",
+    "name": "description",
+    "info": "Flow Description:\n\nLorem ipsum dolor sit amet, in mel nulla elitr scripta, mei posse corrumpit eu, vel et movet omnium admodum. Eos ne inermis apeirian indoctum. Nec at vero possit mediocritatem, velit exerci iriure quo cu. Eu mei amet ridens. No his debitis invenire disputationi, ex nec consul aeterno impedit.",
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 731,
+    "y": 65,
+    "edges": [
+      
+    ]
+  },
+  {
+    "id": "50606bf5.b8900ab6",
+    "type": "layout",
+    "z": "8ee57d8a.0166a08a",
+    "name": "title",
+    "info": "Flow Title",
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 557,
+    "y": 69,
+    "edges": [
+      
+    ]
+  },
+  {
+    "id": "6e8f55ae.5a2672c5",
+    "type": "function",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Gauge",
+    "clusterid": "",
+    "func": "dataframe.message = {\n data: {\n   total: 76.5,\n   target: 91.5\n }\n};\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 361,
+    "y": 405,
+    "edges": [
+      [
+        "963e6404.e383c533"
+      ]
+    ]
+  },
+  {
+    "id": "963e6404.e383c533",
+    "type": "pulse",
+    "z": "8ee57d8a.0166a08a",
+    "name": "Gauge Indicator",
+    "sequenceNum": "11",
+    "pulseType": "widget-single-indicator",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "userComments": [
+      
+    ],
+    "plotPosX": 0,
+    "plotPosY": 0,
+    "plotZOrder": 1,
+    "plotVisible": false,
+    "x": 351,
+    "y": 475,
+    "edges": [
+      [
+        
+      ]
+    ]
+  }
+]
