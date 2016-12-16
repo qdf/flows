@@ -1,0 +1,96 @@
+[
+  {
+    "id": "01e524d0.2fac7835",
+    "type": "comparebar",
+    "z": "c179349c.6f7375b8",
+    "name": "Comparative Sales Analysis",
+    "sequenceNum": 1,
+    "pulseType": "widget-bar-chart",
+    "description": "Many JavaScript developers are still working in an environment that's not there yet, however - especially if writing code to run in web browsers, where the site developers often can't be sure what browser/version their clients will be using.\n\nIf you can assume the JavaScript interpreter is compliant with the previous edition of the ECMAScript specification (which rules out, for example, versions of Internet Explorer before 9), then you can use the forEach iterator method instead of a loop. In that case, you pass a function to be called for each item in the list:",
+    "xtitle": "X-Axis Title",
+    "ytitle": "Sales Volume",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "userComments": [],
+    "x": 248,
+    "y": 341,
+    "edges": [
+      []
+    ]
+  },
+  {
+    "id": "9efc90c1.cb01ce94",
+    "type": "inject",
+    "z": "c179349c.6f7375b8",
+    "name": "",
+    "topic": "",
+    "message": "",
+    "messageType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "x": 475,
+    "y": 83,
+    "edges": [
+      [
+        "b795a848.75982c60",
+        "8cf4d817.0b0ca06c"
+      ]
+    ]
+  },
+  {
+    "id": "b795a848.75982c60",
+    "type": "function",
+    "z": "c179349c.6f7375b8",
+    "name": "Comparative Bar Chart (2 series)",
+    "clusterid": "",
+    "func": "    var options = {\n      \tlegend: [\"Women\", \"Men\"],\n      \tcolor: [\"hotpink\", \"blue\"]\n      };\n\n    var males =[\n\t\t  ['Nail polish',   -229],\n          ['Eyebrow pencil', -932],\n          ['Rouge' ,  -5221],\n          ['Pomade' ,  -256],\n          ['Eyeshadows',  -308],\n          ['Eyeliner', -432],\n          ['Foundation',  -701],\n          ['Lip gloss' ,  -908],\n          ['Mascara' ,  -712],\n          ['Shampoo' ,   -9229],\n          ['Hair conditioner' ,  -13932],\n          ['Body lotion' ,  -10221],\n          ['Shower gel' ,  -12256],\n          ['Soap' ,   -5308],\n          ['Eye fresher' ,  -432],\n          ['Deodorant' ,   -11701],\n          ['Hand cream' ,  -5808],\n          ['Foot cream' ,  -3987],\n          ['Night cream' ,  -847],\n          ['Day cream' ,  -4008],\n          ['Vanila cream' ,  -712]\n        ];\n        \nvar females = [\n['Nail polish' ,  5376 ],\n          ['Eyebrow pencil' , 10987 ],\n          ['Rouge' , 7624 ],\n          ['Pomade' , 8814 ],\n          ['Eyeshadows' , 8998 ],\n          ['Eyeliner' , 9321 ],\n          ['Foundation' , 8342 ],\n          ['Lip gloss' , 6998 ],\n          ['Mascara' , 9261 ],\n          ['Shampoo' ,  5376 ],\n          ['Hair conditioner' , 10987 ],\n          ['Body lotion' , 7624 ],\n          ['Shower gel' , 8814 ],\n          ['Soap' , 8998 ],\n          ['Eye fresher' , 9321 ],\n          ['Deodorant' , 8342 ],\n          ['Hand cream' , 7598 ],\n          ['Foot cream' , 6098 ],\n          ['Night cream' , 6998 ],\n          ['Day cream' , 5304 ],\n          ['Vanila cream' , 9261 ]\n        ];\n\n \n\n\n  dataframe.message = {\n  \tdata: [females, males],\n  \toptions: options\n  };\n\n  \nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 730,
+    "y": 227,
+    "edges": [
+      [
+        "5fac1ca7.1cc6a04c"
+      ]
+    ]
+  },
+  {
+    "id": "8cf4d817.0b0ca06c",
+    "type": "function",
+    "z": "c179349c.6f7375b8",
+    "name": "Comparative Bar Chart (3 series)",
+    "clusterid": "",
+    "func": "    var options = {\n      \tlegend: [\"Women\", \"Men\", \"Unknown\"],\n      \tcolor: [\"hotpink\", \"blue\", \"grey\"]\n      };\n\n    var males =[\n\t\t  ['Nail polish',   -229],\n          ['Eyebrow pencil', -932],\n          ['Rouge' ,  -5221],\n          ['Pomade' ,  -256],\n          ['Eyeshadows',  -308],\n          ['Eyeliner', -432],\n          ['Foundation',  -701],\n          ['Lip gloss' ,  -908],\n          ['Mascara' ,  -712],\n          ['Shampoo' ,   -9229],\n          ['Hair conditioner' ,  -13932],\n          ['Body lotion' ,  -10221],\n          ['Shower gel' ,  -12256],\n          ['Soap' ,   -5308],\n          ['Eye fresher' ,  -432],\n          ['Deodorant' ,   -11701],\n          ['Hand cream' ,  -5808],\n          ['Foot cream' ,  -3987],\n          ['Night cream' ,  -847],\n          ['Day cream' ,  -4008],\n          ['Vanila cream' ,  -712]\n        ];\n        \nvar females = [\n['Nail polish' ,  5376 ],\n          ['Eyebrow pencil' , 10987 ],\n          ['Rouge' , 7624 ],\n          ['Pomade' , 8814 ],\n          ['Eyeshadows' , 8998 ],\n          ['Eyeliner' , 9321 ],\n          ['Foundation' , 8342 ],\n          ['Lip gloss' , 6998 ],\n          ['Mascara' , 9261 ],\n          ['Shampoo' ,  5376 ],\n          ['Hair conditioner' , 10987 ],\n          ['Body lotion' , 7624 ],\n          ['Shower gel' , 8814 ],\n          ['Soap' , 8998 ],\n          ['Eye fresher' , 9321 ],\n          ['Deodorant' , 8342 ],\n          ['Hand cream' , 7598 ],\n          ['Foot cream' , 6098 ],\n          ['Night cream' , 6998 ],\n          ['Day cream' , 5304 ],\n          ['Vanila cream' , 9261 ]\n        ];\nvar unknown = [\n['Nail polish' ,  2376 ],\n          ['Eyebrow pencil' , 1987 ],\n          ['Rouge' , 3624 ],\n          ['Pomade' , 4814 ],\n          ['Eyeshadows' , 2998 ],\n          ['Eyeliner' , 1321 ],\n          ['Foundation' , 2342 ],\n          ['Lip gloss' , 3998 ],\n          ['Mascara' , 2261 ],\n          ['Shampoo' ,  2376 ],\n          ['Hair conditioner' , 6987 ],\n          ['Body lotion' , 4624 ],\n          ['Shower gel' , 3814 ],\n          ['Soap' , 2998 ],\n          ['Eye fresher' , 5321 ],\n          ['Deodorant' , 6342 ],\n          ['Hand cream' , 5598 ],\n          ['Foot cream' , 7098 ],\n          ['Night cream' , 9998 ],\n          ['Day cream' , 7304 ],\n          ['Vanila cream' , 2261 ]\n        ];\n\n \n\n\n  dataframe.message = {\n  \tdata: [females, males, unknown],\n  \toptions: options\n  };\n\n  \nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "x": 332,
+    "y": 219,
+    "edges": [
+      [
+        "01e524d0.2fac7835"
+      ]
+    ]
+  },
+  {
+    "id": "5fac1ca7.1cc6a04c",
+    "type": "comparebar",
+    "z": "c179349c.6f7375b8",
+    "name": "Comparative Sales Analysis",
+    "sequenceNum": "2",
+    "pulseType": "widget-bar-chart",
+    "description": "Many JavaScript developers are still working in an environment that's not there yet, however - especially if writing code to run in web browsers, where the site developers often can't be sure what browser/version their clients will be using.\n\nIf you can assume the JavaScript interpreter is compliant with the previous edition of the ECMAScript specification (which rules out, for example, versions of Internet Explorer before 9), then you can use the forEach iterator method instead of a loop. In that case, you pass a function to be called for each item in the list:",
+    "xtitle": "X-Axis Title",
+    "ytitle": "Sales Volume",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "userComments": [],
+    "x": 645,
+    "y": 335,
+    "edges": [
+      []
+    ]
+  }
+]

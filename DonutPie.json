@@ -1,0 +1,58 @@
+[
+  {
+    "id": "3d69356e.d3f6f2fc",
+    "type": "pie",
+    "z": "27bc768a.3d503ae2",
+    "name": "",
+    "sequenceNum": 1,
+    "pulseType": "widget-donut-pie",
+    "description": "",
+    "enabled": true,
+    "streamEnabled": false,
+    "maxPoints": 10,
+    "userComments": [],
+    "x": 466,
+    "y": 390,
+    "edges": [
+      []
+    ]
+  },
+  {
+    "id": "993a9bca.0f07a86f",
+    "type": "inject",
+    "z": "27bc768a.3d503ae2",
+    "name": "",
+    "topic": "",
+    "message": "",
+    "messageType": "date",
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "userComments": [],
+    "x": 476,
+    "y": 220,
+    "edges": [
+      [
+        "37a9ef89.7fa2f6a2"
+      ]
+    ]
+  },
+  {
+    "id": "37a9ef89.7fa2f6a2",
+    "type": "function",
+    "z": "27bc768a.3d503ae2",
+    "name": "",
+    "clusterid": "",
+    "func": "\nvar data = [\n    ['Quantiply', 6371664],\n    ['SAP', 7216301],\n    ['IBM', 1486621],\n    ['Oracle', 786622],\n    ['SIs', 900000]\n  ];\n  var options = {\n      title: \"DonutPie Demo\"\n  }\n  dataframe.message = {\n      data: data,\n      options: options\n  }\nreturn dataframe;",
+    "outputs": 1,
+    "noerr": 0,
+    "userComments": [],
+    "x": 486,
+    "y": 320,
+    "edges": [
+      [
+        "3d69356e.d3f6f2fc"
+      ]
+    ]
+  }
+]
